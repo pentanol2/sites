@@ -133,3 +133,18 @@ document.getElementById("mybtn").onclick = function(){
     active = false;  
 }
 */
+
+/*
+
+change_menu_icon("mybtn","menu_icon","fa fa-times");
+
+function change_menu_icon(menu_btn_id,icon_id,dest_icon){
+    var menu = document.getElementById(menu_btn_id);
+    menu.onclick = function(){
+        var icon = document.getElementById(icon_id);
+        icon.style.transition = "600000ms";
+        icon.className = dest_icon
+        
+    }
+}
+*/
