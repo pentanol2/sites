@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .container{
+            width: 300px;
+        }
+        .click{
+            display: inline-block;
+        }
+
+        .content{
+            width: 250px;
+            height: 75px;
+            background-color: burlywood;
+        }
+
+        .container>.click:hover .content{
+            background-color: crimson;
+        }
+    </style>
+    <title>Trial</title>
+</head>
+<body>
+    <div class="container">
+        <a class="click" href="#">Click Me</a>
+        <div class="content">
+            <p>This is a trial content</p>
+        </div>
+    </div>
+    <script>
+        document.getElementsByClassName("click")[0].onclick = function(){hide()};
+        function hide(){
+            var items = document.getElementsByClassName("content");
+            items[0].style.backgroundColor = "blue";
+            console.log(items[0]);
+            //[0].style.background-color = "yellow";
+        }
+    </script>
+</body>
+</html>

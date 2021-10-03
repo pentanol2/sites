@@ -8,16 +8,10 @@
 /* local imports */
 @import url("grid.css");
 
+
+
 /* reset browser settings */
 *{
-    margin: 0;
-    padding: 0;
-}
-
-/* set default css configuration */
-*{  
-    box-sizing:border-box;
-    /*box-sizing: content-box;*/
     margin: 0;
     padding: 0;
 }
@@ -26,10 +20,23 @@ ul{
     list-style: none;
     text-indent: 0;
 }
-
 a{
     text-decoration: none;
 }
+
+/* set default css configuration */
+*{  
+    box-sizing:border-box;
+}
+
+
+
+
+
+/* prefered generic styles */
+
+
+a,
 a:visited,
 a:active{
     color: #464555;
@@ -41,8 +48,6 @@ body{
     font-size: 16px;
 }
 
-
-/* prefered generic styles */
 p,a{
     
     font-style: normal;
@@ -87,16 +92,60 @@ h5{
 section{
     padding-bottom: 150px;
 }
- /* For Colors */
+@media (max-width: 414px){
+    h1{
+        font-size: 32px;
+        line-height: 48px;
+    }
+    
+    h2{
+        font-size: 24px; 
+        line-height: 36px;
+        font-weight: normal;
+    }
+    
+    h3{
+        font-size: 18px; 
+        line-height: 48px;
+    }
+    
+    h4{
+        font-size: 24px; 
+        line-height: 36px;
+    }
+    
+    h5{
+        font-size: 20px; 
+        line-height: 30px;
+    }
+    
+    section{
+        padding-bottom: 50px;
+    }
+
+}
+/* Theme Styles */
+
+ /* color classes */
+
 .p-color{
+    /* primary color */
     color: #384DA1;
 }
 
 .s-color{
+    /* secondary color */
     color: #6070A8;
 }
-/* For Fonts */
+
+.ca-color-1{
+    /* call to action color 1*/
+    color: #613aa1;
+}
+
+/* font classes */
 .p-font{
+    /* primary font used by default for all kinds of text */
     font-family: 'Roboto Slab', serif;
     font-style: normal;
     font-weight: 400;
@@ -105,45 +154,63 @@ section{
 
 }
 .s-font{
+    /* secont font used for - titles - subtitles - from labels -  */
     font-family: 'Ropa Sans', sans-serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 16px;
     line-height: 21px; 
 }
 
 
 h1.s-font{
-    font-size: 48px;
     display: inline-block;
     padding: 15px 0;
 }
 
-/* Sizes */
+@media (max-width: 414px){
+    .p-font{
+        line-height: 48px;
+    }
+    h1.s-font{
+        line-height: 48px;
+    }
+
+}
+
+/* sizing */
+
+/* font sizing */
 
 .f-sm{
+    /* small */
     font-size: 16px;
 }
 
 .f-md{
+
+    /* medium */
     font-size: 32px;
 }
 
 .f-bg{
+    /* big */ 
     font-size: 64px;
 }
 
-/* common components styles */
+/* common component styles */
 
 /* bottons */
 
+/* primary button */
 .p-button{
+    display: inline-block;
     font-family: 'Ropa Sans', sans-serif;
     font-size: 20px;
     font-weight: 400;
     color: #3A4DA1 !important;
     border: 3px solid #3A4DA1;
-    padding: 6px 24px;
+    /*padding: 6px 24px;*/
+    padding: 0.6em 2em;
     border-radius: 3px;
 }
 
@@ -161,19 +228,79 @@ h1.s-font{
 
 }
 
+/* secondary button */
+.s-button{
+    display: inline-block;
+    font-family: 'Ropa Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: #613aa1 !important;
+    border: 3px solid #613aa1;
+    /*padding: 6px 24px;*/
+    padding: 0.6em 2em;
+    border-radius: 3px;
+}
+
+.s-button:hover{
+    border: 3px solid  #3A4DA1;
+    background-color:#3A4DA1 ;
+    color: #ffff !important;
+    transition: 500ms;
+}
+
+.s-button:active{
+    background-color: #D4EEFF;
+    border: 3px solid #613aa1;
+    color: #3A4DA1  !important;
+
+}
+
+
+
+
 /* template common styles */
 /* header */
 /* site navigation */
+
+.mobile-menu-btn{
+    display: none;
+    position: absolute;
+    background-color: transparent;
+    font-size: 40px;
+    border: none;
+    padding: 0px;
+    margin: 25px;
+}
+
 .navbar{
+    
+    position: relative;
     height: 80px;
-    background-color: #ffff !important;
+    background-color: #ffff;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
+@media (max-width: 414px){
+    .navbar{
+        /* min-height: 235px; */
+        background: #E9F7FF;
+    }
+}
+
 .nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
     
+}
+
+@media (max-width: 414px){
+    .nav{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content:baseline;
+        
+    }
 }
 
 
@@ -188,9 +315,11 @@ h1.s-font{
 .nav ul{
     display: flex;
 }
+
 .nav li{
     margin-right: 40px;
 }
+
 .nav li a{
     font-size: 20px;
     color: inherit;
@@ -204,6 +333,49 @@ h1.s-font{
 
 .nav li:nth-last-of-type(1){
     margin-right: 0;
+}
+@media (max-width: 414px){
+    .mobile-menu-btn{
+        display:inline-block;
+    }
+
+    .nav .menu{
+        position: absolute;
+        background-color: rgba(0,0,0,0.8);
+        width: 100%;
+        top: 80px;
+        height: calc(100vh - 80px);
+        left: -100%;
+        z-index: 10000;
+    }
+
+    .mobile-menu-btn:active .menu{
+        display: block;
+    }
+    .nav ul{
+        position: absolute;
+        flex-direction: column;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        
+    }
+    .nav li{
+        margin: 0 auto;
+        border-bottom: 1px solid rgba(255,255,255,0.5);
+        display: inline-block;
+        width: 100%;
+    }
+    
+    .nav li:nth-last-of-type(1){
+        margin: 0 auto;
+    }
+    .nav li a{
+        display: block;
+        color: #ffff;
+        text-align: center;
+        padding: 55px auto;
+    }
 }
 
 /* footer */
@@ -222,6 +394,7 @@ h1.s-font{
     align-items: center;
     justify-content: space-between;
 }
+
 .footer p a{
     color: #613aa1;
     font-weight: bold;
@@ -232,6 +405,7 @@ h1.s-font{
     color: #6070A8 !important;
     
 }
+
 
 .footer ul li{
     margin-right: 40px;   
@@ -244,6 +418,27 @@ h1.s-font{
     margin-right:0;
 }
 
+@media (max-width: 414px){
+    .footer{
+        height: 205px;
+        padding: 20px;
+    }
+    .footer ul,
+    .footer .container{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer .container{
+        justify-content: center ;
+    }
+
+    .footer ul li,
+    .footer ul li:nth-last-of-type(1){
+        margin: 0 auto;
+    }
+
+}
 
 
 /*This container is generic it encompasses all with the scope of the content part*/
@@ -252,6 +447,13 @@ h1.s-font{
     height: auto;
     margin: 0 auto;
 } 
+
+@media (max-width: 414px){
+    .container{
+        width: 100%;
+        padding: 0 20px;
+    }
+}
 
 /* Content*/
 .content{
@@ -263,7 +465,7 @@ h1.s-font{
 
 .banner{ 
     background-color: rgba(255,255,255,0.6);
-    height: 525px;
+    /*height: 525px;*/
     padding-top: 100px;
 }
 
@@ -271,14 +473,12 @@ h1.s-font{
     position: relative;
     width: 290px;
     height: 350px;
-    overflow: hidden;
 }
 
 .banner #img-container img{
     position: absolute;
     width: 545.28px;
     height: 353.58px;
-    /*left: -150px;*/
     left: -50px;
     top:0px;
     opacity: 0.9;
@@ -296,7 +496,23 @@ h1.s-font{
     margin-top: 60px;
     margin-bottom: 60px;
 }
+@media (max-width: 414px){
+    .banner{
+        /*background-color: red;*/
+        text-align: center;
+        padding-top: 0;
+        /*height: auto;*/
+    }
+    .banner .img-container{
+        width: 90%;
+    }
 
+    .banner #banner-content{
+        padding:0;
+        width: 100%;
+    }
+
+}
 /* Cards */
 .section-header{
     margin-bottom: 50px;
@@ -307,7 +523,8 @@ h1.s-font{
     font-weight: 400;
  }
 .card-list{
-    
+    /* Let it empty now*/
+    background: transparent;
 }
 
 .card{
@@ -378,13 +595,13 @@ h1.s-font{
 }
 
 .card-square{
-    background-color: #D4EEFF;
+    /*background-color: #D4EEFF;*/
     display: flex;
     flex-wrap: wrap;
 
 }
 .card-square>div{
-    border:1px solid lightseagreen;
+    /*border:1px solid lightseagreen;*/
     width: 290px;
     height: 230px;
     margin: 5px;
