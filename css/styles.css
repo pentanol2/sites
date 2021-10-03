@@ -473,6 +473,7 @@ h1.s-font{
     position: relative;
     width: 290px;
     height: 350px;
+    overflow: hidden;
 }
 
 .banner #img-container img{
