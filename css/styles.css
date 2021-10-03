@@ -265,11 +265,14 @@ h1.s-font{
 .mobile-menu-btn{
     display: none;
     position: absolute;
+    color: #3A4DA1;
     background-color: transparent;
     font-size: 40px;
     border: none;
     padding: 0px;
-    margin: 25px;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
 }
 
 .navbar{
