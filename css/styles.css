@@ -94,29 +94,33 @@ section{
 }
 @media (max-width: 414px){
     h1{
-        font-size: 32px;
-        line-height: 48px;
+        font-size: 41px;
+        line-height: 61px;
     }
     
     h2{
-        font-size: 24px; 
-        line-height: 36px;
+        font-size: 34px; 
+        line-height: 51px;
         font-weight: normal;
+        font-weight: 900;
     }
     
     h3{
-        font-size: 18px; 
-        line-height: 48px;
+        font-size: 27px; 
+        line-height: 40px;
+        font-weight: 900 !important;
     }
     
     h4{
-        font-size: 24px; 
-        line-height: 36px;
+        font-size: 21px; 
+        line-height: 32px;
+        font-weight: 900;
     }
     
     h5{
-        font-size: 20px; 
-        line-height: 30px;
+        font-size: 17px; 
+        line-height: 26px;
+        font-weight: 900;
     }
     
     section{
@@ -172,7 +176,8 @@ h1.s-font{
         line-height: 48px;
     }
     h1.s-font{
-        line-height: 48px;
+        font-weight:900;
+        line-height: 40px;
     }
 
 }
@@ -284,6 +289,9 @@ h1.s-font{
 }
 @media (max-width: 414px){
     .navbar{
+        display: flex;
+        justify-content: center;
+        align-items: center; 
         /* min-height: 235px; */
         background: #E9F7FF;
         z-index: 1;
@@ -302,7 +310,7 @@ h1.s-font{
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content:baseline;
+        justify-content:center;
         
     }
 }
