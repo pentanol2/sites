@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider HTML</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .container{
+            background-color: rgba(255, 105, 180, 0.226);
+        }
+        #slider{
+            display: flex;
+            /*background-color: chartreuse;*/
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+        #slider>div{
+            flex-shrink: 0;
+            flex-grow: 0;
+            margin: 10px;        
+            width: 480px;
+            height: 480px;
+        }
+        #slider .screen{
+            position: relative;
+            overflow: hidden;
+        }
+        #slider .screen img{
+            position: absolute;
+            width: 151%;
+            top:50%;
+            transform: translateY(-50%);
+        }
+
+        #slider .thumbnails{
+            display: flex;
+            /* background-color: darkorange;*/
+            flex-wrap: wrap;
+        }
+
+        #slider .thumbnails .thumbnail {
+            position: relative;
+            flex-shrink: 0;
+            /* background-color: gold; */
+            width: 150px;
+            height: 150px;
+            margin: 5px;
+            
+            overflow: hidden;
+        }
+        #slider .thumbnails .thumbnail img{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            vertical-align: middle;
+            width: 150%;
+        }
+        @media (max-width:414px){
+            .container{
+                width: 100%;
+                height: auto;
+            }
+
+            #slider{
+                width: 100%;
+                justify-items:stretch;
+                align-items: center;
+                justify-content: center;
+            }
+
+            #slider .screen{
+                width: 300px;
+                height: 300px;
+                overflow: hidden;
+            }
+
+            #slider .screen img{
+                width: 150%;;
+            }
+            
+            #slider .thumbnails{
+                width: 100%;
+                height: auto;
+            }
+
+            #slider .thumbnails .thumbnail{
+                width: 145px;
+                height: 145px;
+            }
+
+            #slider .thumbnails .thumbnail:nth-of-type(odd){
+                margin: 0 5px 5px 10px;
+            }
+            #slider .thumbnails .thumbnail:nth-of-type(even){
+                margin: 0 10px 5px 5px ;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="container">
+        <div id="slider">
+            <div class="screen">
+                <img src="resources/tmp/img/1.jpg" alt="1">
+            </div>
+            <div class="thumbnails">
+                <div class="thumbnail">
+                    <img src="resources/tmp/img/1.jpg" alt="1">
+                </div>
+                <div class="thumbnail">
+                    <img src="resources/tmp/img/2.jpg" alt="2">
+                </div>
+                <div class="thumbnail">
+                    <img src="resources/tmp/img/3.jpg" alt="3">
+                </div>
+                <div class="thumbnail">
+                    <img src="resources/tmp/img/4.jpg" alt="4">
+                </div>
+                <div class="thumbnail">
+                    <img src="resources/tmp/img/5.jpg" alt="5">
+                </div>
+                <div class="thumbnail">
+                    <img src="resources/tmp/img/6.jpg" alt="6">
+                </div>
+                <div class="thumbnail">
+                    <img src="resources/tmp/img/7.jpg" alt="7">
+                </div>
+                <div class="thumbnail">
+                    <img src="resources/tmp/img/8.jpg" alt="8">
+                </div>
+                <div class="thumbnail">
+                    <img src="resources/tmp/img/9.jpg" alt="9">
+                </div>
+            </div>            
+        </div>
+        </div>
+    </div>
+    <script>
+        var slider = document.getElementById("slider");
+        var s_screen = slider.getElementsByClassName("screen");
+        var thumbnails = slider.getElementsByClassName("thumbnail");
+        var current = thumbnails[0];
+        for (var i = 0 ; i<thumbnails.length; i++){
+            img_src = thumbnails[i].childNodes[1].src;
+            thumbnails[i].addEventListener("click", (evnt) => {
+                console.log("Fazla basma. Oğlum seni döverim : \n"+event.target.src);
+                // console.log(evnt.target.src);
+                // console.log(event.img_src)
+                // console.log("Data "+thumbnails[i]);
+                // s_screen[0].childNodes[1].src = thumbnails[i].childNodes[1].src;
+                s_screen[0].childNodes[1].src = evnt.target.src;
+                if (current != evnt.target){
+                    current.style.opacity = "1";
+                    evnt.target.style.opacity = "0.6";
+                    current = evnt.target;
+                }
+            },false);
+            // var curNail = thumbnails[i];
+            // thumbnails[i].style.opacity = "0.5";
+            /*
+            curNail..onclick = function(c){
+                // s_screen[0].childNodes[1].src = thumbnails[i].childNodes[1].src ;
+                // s_screen[0].childNodes[1].src =
+
+                // console.log(s_screen[0].childNodes[1].src);
+                console.log(curNail);
+                console.log("[ * * **** * * ]");
+                // console.log(thumbnails[i].childNodes[1].src);
+            }
+            */
+        }
+
+        function update(srcs){return;}
+        /*
+            var curNail = thumbnails[i];
+            // thumbnails[i].style.opacity = "0.5";
+            curNail.onclick = function(c){
+                // s_screen[0].childNodes[1].src = thumbnails[i].childNodes[1].src ;
+                // s_screen[0].childNodes[1].src =
+
+                // console.log(s_screen[0].childNodes[1].src);
+                console.log(curNail);
+                console.log("[ * * **** * * ]");
+                console.log();
+                // console.log(thumbnails[i].childNodes[1].src);
+            } 
+        */
+    </script>
+</body>
+</html>

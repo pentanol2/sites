@@ -148,3 +148,14 @@ function change_menu_icon(menu_btn_id,icon_id,dest_icon){
     }
 }
 */
+
+
+var filter = document.getElementById("filterForm");
+
+var filterBtn = document.getElementById("formBtn");
+
+filterBtn.onclick = function(){
+    filter.style.display = "block";
+    filter.style.top = "0";
+    filter.style.transition = "6000ms";
+}

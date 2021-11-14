@@ -1,0 +1,122 @@
+#slider{
+    display: flex;
+    /*background-color: chartreuse;*/
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+#slider>div{
+    flex-shrink: 0;
+    flex-grow: 0;
+    margin: 10px;        
+    width: 595px;
+    height: 595px;
+}
+#slider .screen{
+    position: relative;
+    margin-left: 0;
+    margin-right: 5px;
+    overflow: hidden;
+}
+#slider .screen img{
+    position: absolute;
+    width: 151%;
+    top:50%;
+    transform: translateY(-50%);
+}
+
+#slider .thumbnails{
+    display: flex;
+    /* background-color: darkorange;*/
+    margin-left: 5px;
+    margin-right: 0;
+    gap: 0;
+    justify-content:space-between;
+    /*align-content: stretch;*/
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+#slider .thumbnails .thumbnail {
+    position: relative;
+    flex-shrink: 0;
+    flex-grow: 0;
+    /* background-color: gold; */
+    /*width: calc(100% / 3 - 20px);*/
+    width: 191px;
+    height: 192px;
+    margin: 5px;
+    background-color: yellowgreen;
+    
+    overflow: hidden;
+}
+#slider .thumbnails .thumbnail:nth-of-type(1),
+#slider .thumbnails .thumbnail:nth-of-type(2),
+#slider .thumbnails .thumbnail:nth-of-type(3){
+    margin-top: 0;
+}
+
+
+#slider .thumbnails .thumbnail:nth-last-of-type(1),
+#slider .thumbnails .thumbnail:nth-last-of-type(2),
+#slider .thumbnails .thumbnail:nth-last-of-type(3){
+    margin-bottom: 0;
+}
+
+#slider .thumbnails .thumbnail:nth-of-type(3n){
+    margin-right: 0;
+}
+
+#slider .thumbnails .thumbnail:nth-of-type(3n+1){
+    margin-left: 0;
+}
+
+
+#slider .thumbnails .thumbnail img{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    vertical-align: middle;
+    width: 150%;
+}
+@media (max-width:414px){
+    .container{
+        width: 100%;
+        height: auto;
+    }
+
+    #slider{
+        width: 100%;
+        justify-items:stretch;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #slider .screen{
+        width: 300px;
+        height: 300px;
+        overflow: hidden;
+    }
+
+    #slider .screen img{
+        width: 150%;;
+    }
+    
+    #slider .thumbnails{
+        width: 100%;
+        height: auto;
+    }
+
+    #slider .thumbnails .thumbnail{
+        width: 145px;
+        height: 145px;
+    }
+
+    #slider .thumbnails .thumbnail:nth-of-type(odd){
+        margin: 0 5px 5px 10px;
+    }
+    #slider .thumbnails .thumbnail:nth-of-type(even){
+        margin: 0 10px 5px 5px ;
+    }
+}

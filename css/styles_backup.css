@@ -344,7 +344,7 @@ h1.s-font{
 .form-container *{
     display: block;
     font-family: 'Ropa Sans', sans-serif;
-    font-size: 24px;
+    font-size: 32px;
 }
 
 .form-container .form{
@@ -353,7 +353,7 @@ h1.s-font{
 }
 
 .form-container label{
-    font-size: 24px;
+    font-size: 32px;
     font-weight: 600;
     margin-bottom: 25px;
 }
@@ -369,7 +369,6 @@ h1.s-font{
     padding: 30px 20px;
     border: 3px solid #6070A8;
     outline: -30px solid #6070A8;
-    border-radius: 5px;
 }
 
 .form-container textarea::placeholder{
@@ -379,14 +378,13 @@ h1.s-font{
 .form-container input, 
 .form-container textarea{
     margin-bottom: 40px;
-    border-radius: 5px;
 }
 
 .form-container input[type=text],
 .form-container input[type=email]{
     box-sizing: border-box;
-    height: 50px;
-    width: 450px;
+    height: 70px;
+    width: 500px;
     padding: 15px 15px;
 }
 
@@ -394,13 +392,13 @@ h1.s-font{
 .form-container input[type=email]::placeholder,
 .form-container textarea::placeholder{
     font-family: 'Ropa Sans', sans-serif;
-    font-size: 24px;
+    font-size: 32px;
 }
 
 
 .form-container input[type=submit]{
     width: 200px;
-    padding: 10px 40px;
+    padding: 15px 50px;
     background-color: transparent;
 }
 
@@ -677,34 +675,18 @@ h1.s-font{
 
 /*This container is generic it encompasses all with the scope of the content part*/
 .container {
-    /*background-color: #fcba03;*/
+    background-color: #fcba03;
     width: 1200px;
     height: auto;
     margin: 0 auto;
 } 
 
-@media (min-width: 768px) and (max-width: 1280px){
+@media (min-width: 415px) and (max-width: 1280px){
     .container{
-        width:728px;
+        width:90%;
     }
 }
-@media (max-width: 767px){
-    .container{
-        width: calc(100% - 40px);
-    }
 
-    .footer ul,
-    .footer .container{
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .footer .container{
-        justify-content: stretch ;
-        flex-direction: column-reverse;
-        height: auto;
-    }
-}
 @media (max-width: 414px){
     .container{
         width: 100%;
@@ -919,6 +901,14 @@ h1.s-font{
 }
 
 @media (min-width: 415px) and (max-width: 1280px){
+    .call-card-section{
+        flex-direction: column;
+        /*background-color: #D4EEFF;*/
+    }
+
+    .call-card-section>div{        
+        width: 100%;
+    }
 
     .card-square{
         justify-content:space-around;
@@ -1193,7 +1183,7 @@ h1.s-font{
     position: absolute;
     height: 40px;
     width: 100%;
-    bottom: 0px;
+    bottom: 20px;
     left:0;
     /*background-color: #613aa1;*/
     color: #ffff;

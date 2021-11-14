@@ -30,7 +30,337 @@
         </div>
     </div>
     <div class="content">
+        <div class="p-page-title p-color">
+            <div class="container">
+                <h1>Product Reviews</h1>
+            </div>
+        </div>
+        <div class="container">
+            <section>
+                <div class="row">
+                    <div class="col col-3-12">
+                        <div class="filter">
+                            <h4>Review Filters</h4>
+                            <button id="formBtn"><i class="fas fa-caret-down"></i></button>
+                            <form action="filter.php" id="filterForm">
+                                <select name="product-type" id="type">
+                                    <option value="option-1" disabled selected>Product Type</option>
+                                    <option value="option-2">Fishing Rod</option>
+                                    <option value="option-3">Fishing Reel</option>
+                                    <option value="option-3">Fishing Gear</option>
+                                    <option value="option-3">Hook</option>
+                                </select>
+                                <select name="brand" id="brand">
+                                    <option value="option-1" disabled selected>Brand</option>
+                                    <option value="option-2">option 2</option>
+                                    <option value="option-3">option 3</option>
+                                </select>
+                                <select name="price-range" id="range">
+                                    <option value="option-1" disabled selected>Price Range</option>
+                                    <option value="option-2">10$ - 50$ </option>
+                                    <option value="option-3">50$ - 100$</option>
+                                </select>
+                                <select name="year" id="year">
+                                    <option value="option-1" disabled selected>Year</option>
+                                    <option value="option-2">2021</option>
+                                    <option value="option-3">2020</option>
+                                </select>
+                                <select name="seller" id="seller">
+                                    <option value="option-1" disabled selected>Seller</option>
+                                    <option value="option-2">amazon</option>
+                                    <option value="option-3">ebay</option>
+                                    <option value="option-3">other</option>
+                                </select>
+                                <input type="submit" value="Filter" class="filter-btn"> 
+                                
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col col-3-12">
+                        <div class="r-card">
+                            <a href="single-review.html">
+                                <div class="img-container">
+                                    <img src="resources/img/watch-knife.jpg" alt="">
+                                </div>
+                                <div class="r-description">
+                                    <h4>Watch Knife Bundle</h4>
+                                    <div class="excerpt">
+                                        <p>Just be hopeful. Hope is near. We can see that thing from far. It's easily solved man. Just try to deal with it.</p>
+                                    </div>
+                                    <div class="card-labels">
+                                        <a href="#brand">Brand</a>
+                                        <p>50$</p>
+                                    </div>
+                        
+                                </div>
+                            </a>
+                        </div>
 
+                    </div>
+                    <div class="col col-3-12">
+                        <div class="r-card">
+                            <a href="single-review.html">
+                                <div class="img-container">
+                                    <img src="resources/img/angler-sunset.jpg" alt="">
+                                </div>
+                                <div class="r-description">
+                                    <h4>Watch Knife Bundle</h4>
+                                    <div class="excerpt">
+                                        <p>Just be hopeful. Hope is near. We can see that thing from far. It's easily solved man. Just try to deal with it.</p>
+                                    </div>
+                                    <div class="card-labels">
+                                        <a href="#brand">Brand</a>
+                                        <p>50$</p>
+                                    </div>
+                        
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col col-3-12">
+                        <div class="r-card">
+                            <a href="single-review.html">
+                                <div class="img-container">
+                                    <img src="resources/img/fishing-reel.jpg" alt="">
+                                </div>
+                                <div class="r-description">
+                                    <h4>Watch Knife Bundle</h4>
+                                    <div class="excerpt">
+                                        <p>Just be hopeful. Hope is near. We can see that thing from far. It's easily solved man. Just try to deal with it.</p>
+                                    </div>
+                                    <div class="card-labels">
+                                        <a href="#brand">Brand</a>
+                                        <p>50$</p>
+                                    </div>
+                        
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row row-right">
+                    <div class="col col-3-12">
+                        <div class="r-card">
+                            <a href="single-review.html">
+                                <div class="img-container">
+                                    <img src="resources/img/hook.jpg" alt="">
+                                </div>
+                                <div class="r-description">
+                                    <h4>Watch Knife Bundle</h4>
+                                    <div class="excerpt">
+                                        <p>Just be hopeful. Hope is near. We can see that thing from far. It's easily solved man. Just try to deal with it.</p>
+                                    </div>
+                                    <div class="card-labels">
+                                        <a href="#brand">Brand</a>
+                                        <p>50$</p>
+                                    </div>
+                        
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col col-3-12">
+                        <div class="r-card">
+                            <a href="single-review.html">
+                                <div class="img-container">
+                                    <img src="resources/img/red-artificial-bait.jpg" alt="">
+                                </div>
+                                <div class="r-description">
+                                    <h4>Watch Knife Bundle</h4>
+                                    <div class="excerpt">
+                                        <p>Just be hopeful. Hope is near. We can see that thing from far. It's easily solved man. Just try to deal with it.</p>
+                                    </div>
+                                    <div class="card-labels">
+                                        <a href="#brand">Brand</a>
+                                        <p>50$</p>
+                                    </div>
+                        
+                                </div>
+                            </a>
+                        </div>              
+                    </div>
+                    <div class="col col-3-12">
+                        <div class="r-card">
+                            <a href="single-review.html">
+                                <div class="img-container">
+                                    <img src="resources/img/yellow-fishing-rod.jpg" alt="">
+                                </div>
+                                <div class="r-description">
+                                    <h4>Watch Knife Bundle</h4>
+                                    <div class="excerpt">
+                                        <p>Just be hopeful. Hope is near. We can see that thing from far. It's easily solved man. Just try to deal with it.</p>
+                                    </div>
+                                    <div class="card-labels">
+                                        <a href="#brand">Brand</a>
+                                        <p>50$</p>
+                                    </div>
+                        
+                                </div>
+                            </a>
+                        </div>               
+                    </div>
+                </div>
+                <div class="row row-right">
+                    <div class="col col-3-12">
+                        <div class="r-card">
+                            <a href="single-review.html">
+                                <div class="img-container">
+                                    <img src="resources/img/fishing-rods-golden.jpg" alt="">
+                                </div>
+                                <div class="r-description">
+                                    <h4>Watch Knife Bundle</h4>
+                                    <div class="excerpt">
+                                        <p>Just be hopeful. Hope is near. We can see that thing from far. It's easily solved man. Just try to deal with it.</p>
+                                    </div>
+                                    <div class="card-labels">
+                                        <a href="#brand">Brand</a>
+                                        <p>50$</p>
+                                    </div>
+                        
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col col-3-12">
+                        <div class="r-card">
+                            <a href="single-review.html">
+                                <div class="img-container">
+                                    <img src="resources/img/fishing-lure.jpg" alt="">
+                                </div>
+                                <div class="r-description">
+                                    <h4>Watch Knife Bundle</h4>
+                                    <div class="excerpt">
+                                        <p>Just be hopeful. Hope is near. We can see that thing from far. It's easily solved man. Just try to deal with it.</p>
+                                    </div>
+                                    <div class="card-labels">
+                                        <a href="#brand">Brand</a>
+                                        <p>50$</p>
+                                    </div>
+                        
+                                </div>
+                            </a>
+                        </div>              
+                    </div>
+                    <div class="col col-3-12">
+                        <div class="r-card">
+                            <a href="single-review.html">
+                                <div class="img-container">
+                                    <img src="resources/img/fishing-lure-set.jpg" alt="">
+                                </div>
+                                <div class="r-description">
+                                    <h4>Watch Knife Bundle</h4>
+                                    <div class="excerpt">
+                                        <p>Just be hopeful. Hope is near. We can see that thing from far. It's easily solved man. Just try to deal with it.</p>
+                                    </div>
+                                    <div class="card-labels">
+                                        <a href="#brand">Brand</a>
+                                        <p>50$</p>
+                                    </div>
+                        
+                                </div>
+                            </a>
+                        </div>               
+                    </div>
+                </div>
+                <div class="row row-right">
+                    <div class="col col-3-12">
+                        <div class="r-card">
+                            <a href="single-review.html">
+                                <div class="img-container">
+                                    <img src="resources/img/fishing-lure-realistic.jpg" alt="">
+                                </div>
+                                <div class="r-description">
+                                    <h4>Fishing Lure</h4>
+                                    <div class="excerpt">
+                                        <p>Just be hopeful. Hope is near. We can see that thing from far. It's easily solved man. Just try to deal with it.</p>
+                                    </div>
+                                    <div class="card-labels">
+                                        <a href="#brand">Brand</a>
+                                        <p>50$</p>
+                                    </div>
+                        
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col col-3-12">
+                        <div class="r-card">
+                            <a href="single-review.html">
+                                <div class="img-container">
+                                    <img src="resources/img/fishing-hook-modern.jpg" alt="">
+                                </div>
+                                <div class="r-description">
+                                    <h4>Fishing Hook</h4>
+                                    <div class="excerpt">
+                                        <p>Just be hopeful. Hope is near. We can see that thing from far. It's easily solved man. Just try to deal with it.</p>
+                                    </div>
+                                    <div class="card-labels">
+                                        <a href="#brand">Brand</a>
+                                        <p>50$</p>
+                                    </div>
+                        
+                                </div>
+                            </a>
+                        </div>              
+                    </div>
+                    <div class="col col-3-12">
+                        <div class="r-card">
+                            <a href="single-review.html">
+                                <div class="img-container">
+                                    <img src="resources/img/fishing-hook-set.jpg" alt="">
+                                </div>
+                                <div class="r-description">
+                                    <h4>Fishing Hook Bundle</h4>
+                                    <div class="excerpt">
+                                        <p>Just be hopeful. Hope is near. We can see that thing from far. It's easily solved man. Just try to deal with it.</p>
+                                    </div>
+                                    <div class="card-labels">
+                                        <a href="#brand">Brand</a>
+                                        <p>50$</p>
+                                    </div>
+                        
+                                </div>
+                            </a>
+                        </div>               
+                    </div>
+                </div>
+                <div class="pager">
+                    <ul>
+                        <li><a href="#"><i class="fas fa-caret-left"></i></a></li>
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li class="pager-dots">...</li>
+                        <li><a href="#">25</a></li>
+                        <li><a href="#">26</a></li>
+                        <li><a href="#">27</a></li>
+                        <li><a href="#"><i class="fas fa-caret-right"></i></a></li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+        <section class="social-footer">
+            <div class="container">
+                <div class="s-links">
+                    <h4>Follow Us</h4>
+                    <ul>
+                        <li>
+                            <a href="#" class="s-link"><i class="fab fa-instagram"></i></a>
+                        </li>
+                        <li>
+                            <a href="#" class="s-link"><i class="fab fa-facebook"></i></a>
+                        </li>
+                        <li>
+                            <a href="#" class="s-link"><i class="fab fa-pinterest"></i></a>
+                        </li>
+                        <li>
+                            <a href="#" class="s-link"><i class="far fa-envelope"></i></a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </section>
     </div>
     <div class="footer">
         <div class="container">
@@ -40,9 +370,9 @@
             <div>
                 <ul class="s-color">
                     <li><a href="reviews.html">Reviews</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li> 
-                    <li><a href="#">Terms of Use</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li> 
+                    <li><a href="terms.html">Terms of Use</a></li>
                     <li><a href="#">Top <i class="fa fa-level-up-alt"></i></a></li>    
                 </ul>
             </div>
